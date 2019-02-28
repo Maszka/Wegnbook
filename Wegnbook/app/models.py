@@ -35,7 +35,7 @@ class Wegan(models.Model):
 
     def status(self):
         if self.not_eating_from - datetime.now() < timedelta(days=100):
-            return "Noob"
+            return "Newbie"
         elif self.not_eating_from - datetime.now() < timedelta(days=200):
             return "Herbivore"
         else:
