@@ -40,9 +40,9 @@ class WeganTestCase(TestCase):
 
     def test_should_return_Noob_for_one_who_has_not_eaten_meat_for_100_days_or_less(self):
         self.wegan.not_eating_from = datetime.now()
-        self.assertEqual(self.wegan.status(), "Noob")
+        self.assertEqual(self.wegan.status(), "Newbie")
         self.wegan.not_eating_from = datetime.now() + timedelta(days=99, hours=23)
-        self.assertEqual(self.wegan.status(), "Noob")
+        self.assertEqual(self.wegan.status(), "Newbie")
 
     def test_should_return_Herbivore_for_one_who_has_not_eaten_meat_for_200_days_or_less(self):
         self.wegan.not_eating_from = datetime.now() + timedelta(days=100)

@@ -20,7 +20,7 @@ class Wegan(models.Model):
     weight = models.FloatField()
     height = models.FloatField()
     sex = models.CharField(max_length=1, choices=SEX, )
-    tags = models.ManyToManyField(Tag, null=True)
+    tags = models.ManyToManyField(Tag, blank=True)
 
     def body_mass_index(self):
         return self.weight / self.height ** 2
